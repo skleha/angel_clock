@@ -13,6 +13,6 @@ function angleCalc() {
   const minutes = document.getElementById("minutes").value;
   const oneHourDegrees = 360 / 24;
   
-  console.log(hour / 24 * 360);
+  console.log((hour % 12) / 12 * 360);
   console.log(minutes / 60 * 360);
 }
