@@ -9,3 +9,18 @@ body {
   grid-row-gap: 0px;
   align-items: center;
 }
+
+.data-container {
+  text-align: center;
+}
+
+button {
+  display: block;
+  height: 20px;
+  width: 150px;
+  font-size: 12px;
+  background-color: #0080ff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
