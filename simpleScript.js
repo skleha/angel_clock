@@ -17,6 +17,6 @@ function angleCalc() {
   answerOneDiv.innerHTML = answer;
   
   const answerTwoDiv = document.getElementById("answerTwo");
-  answerTwoDiv.innerHTML = 360 - answer;
+  answerTwoDiv.innerHTML = (360 - answer).toFixed(1);
 
 }
