@@ -1,5 +1,4 @@
 
-
 function angleCalc() {
   const time = document.getElementById("hours").value;
   const timeArray = time.split(":");
