@@ -13,10 +13,11 @@ function angleCalc() {
   const hourAngle = hourPercent * 360 + minutePercent * oneHourDegrees;
   const minuteAngle = minutePercent * 360;
 
-  const answer = document.getElementById("answer");
-  answer.innerHTML = Math.abs(minuteAngle - hourAngle);
+  const answer = Math.abs(hourAngle - minuteAngle).toFixed(1);
+  const answerOneDiv = document.getElementById("answerOne");
+  answerOneDiv.innerHTML = answer;
   
-  console.log(hourAngle);
-  console.log(minuteAngle);
-  console.log(Math.abs(minuteAngle - hourAngle));
+  const answerTwoDiv = document.getElementById("answerTwo");
+  answerTwoDiv.innerHTML = 360 - answer;
+
 }
