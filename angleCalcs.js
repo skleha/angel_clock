@@ -1,4 +1,6 @@
 
+const hourHand = [{xPoint: 0, yPoint: 0}]
+
 function angleCalc() {
   const time = document.getElementById("hours").value;
   const hourAngle = calcHourAngle(time);
@@ -12,7 +14,6 @@ function angleCalc() {
   answerTwoDiv.innerHTML = (360 - answer).toFixed(1);
 
 }
-
 
 function calcHourAngle(time) {
   const timeArray = time.split(":");
