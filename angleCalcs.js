@@ -8,8 +8,8 @@ function angleCalc() {
   const hourAngle = calcHourAngle(timeArray);
   const minuteAngle = calcMinuteAngle(timeArray);
   
-  hourHand[1] = handPoint(hourAngle, 7);
-  minuteHand[1] = handPoint(minuteAngle, 10);
+  hourHand[1] = handPoint(hourAngle, 4);
+  minuteHand[1] = handPoint(minuteAngle, 8);
   
   const answer = Math.abs(hourAngle - minuteAngle).toFixed(1);
   const answerOneDiv = document.getElementById("answerOne");

@@ -54,10 +54,19 @@ let hourHandLine = svg
   .style("stroke-width", 5)
 
 d3.select("#calc-button").on("click", () => {
+  console.log('hi');
+  console.log(minuteHand);
+
   minuteHandLine
     .datum(minuteHand)
+    .attr("d", d3.line()
+      .x((d) => { return x(d.xPoint) })
+      .y((d) => { return y(d.yPoint) }))
 
   hourHandLine
     .datum(hourHand)
+    .attr("d", d3.line()
+      .x((d) => { return x(d.xPoint) })
+      .y((d) => { return y(d.yPoint) }))
   
 })
