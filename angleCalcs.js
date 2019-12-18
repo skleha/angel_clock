@@ -13,6 +13,7 @@ function angleCalc() {
 
 }
 
+
 function calcHourAngle(time) {
   const timeArray = time.split(":");
   const hour = timeArray[0];
