@@ -3,8 +3,9 @@ const hourHand = [{xPoint: 0, yPoint: 0}]
 
 function angleCalc() {
   const time = document.getElementById("hours").value;
-  const hourAngle = calcHourAngle(time);
-  const minuteAngle = calcMinuteAngle(time);
+  const timeArray = time.split(":");
+  const hourAngle = calcHourAngle(timeArray);
+  const minuteAngle = calcMinuteAngle(timeArray);
 
   const answer = Math.abs(hourAngle - minuteAngle).toFixed(1);
   const answerOneDiv = document.getElementById("answerOne");
@@ -15,8 +16,7 @@ function angleCalc() {
 
 }
 
-function calcHourAngle(time) {
-  const timeArray = time.split(":");
+function calcHourAngle(timeArray) {
   const hour = timeArray[0];
   const minutes = timeArray[1];
   const hourPercent = (hour % 12) / 12;
@@ -26,8 +26,7 @@ function calcHourAngle(time) {
   return angle;
 }
 
-function calcMinuteAngle(time) {
-  const timeArray = time.split(":");
+function calcMinuteAngle(timeArray) {
   const minutes = timeArray[1];
   const minutePercent = minutes / 60;
   const angle = minutePercent * 360;
