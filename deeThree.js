@@ -53,6 +53,16 @@ let hourHandLine = svg
   .style("fill", "none")
   .style("stroke-width", 5)
 
+let centerPoint = svg
+  .selectAll("circle")
+  .enter()
+  .append("circle")
+  .attr("cx", 0)
+  .attr("cy", 0)
+  .attr("r", 3)
+  .style("fill", "#636363")
+
+
 d3.select("#calc-button").on("click", () => {
   console.log('hi');
   console.log(minuteHand);
