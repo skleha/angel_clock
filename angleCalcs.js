@@ -1,12 +1,16 @@
 
-const hourHand = [{xPoint: 0, yPoint: 0}]
+const hourHand = [{xPoint: 0, yPoint: 0}];
+const minuteHand = [{xPoint: 0, yPoint: 0}];
 
 function angleCalc() {
   const time = document.getElementById("hours").value;
   const timeArray = time.split(":");
   const hourAngle = calcHourAngle(timeArray);
   const minuteAngle = calcMinuteAngle(timeArray);
-
+  
+  hourHand[1] = handPoint(hourAngle, 7);
+  minuteHand[1] = handPoint(minuteAngle, 10);
+  
   const answer = Math.abs(hourAngle - minuteAngle).toFixed(1);
   const answerOneDiv = document.getElementById("answerOne");
   answerOneDiv.innerHTML = answer;

@@ -32,4 +32,14 @@ svg.append("g")
   .call(yAxisCall);
 
 
+let minuteHandLine = svg
+  .append("g")
+  .append("path")
+  .datum(minuteHand)
+  .attr("d", d3.line()
+    .x((d) => { return d.xPoint })
+    .y((d) => { return d.yPoint }))
+  .attr("stroke", "#8b4ef5")
+  .style("fill", "none")
+  .style("stroke-width", 14)
 
