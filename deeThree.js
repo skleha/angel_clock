@@ -11,7 +11,7 @@ let svg = d3.select("#my_dataviz")
   .append("g")
   .attr("transform",
     "translate(" + margin.left + "," + margin.top + ")")
-
+  
 let x = d3.scaleLinear()
   .domain([-10, 10])
   .range([0, width])
@@ -31,15 +31,33 @@ svg.append("g")
   .attr("class", "y-axis")
   .call(yAxisCall);
 
-
 let minuteHandLine = svg
   .append("g")
   .append("path")
   .datum(minuteHand)
   .attr("d", d3.line()
-    .x((d) => { return d.xPoint })
-    .y((d) => { return d.yPoint }))
+    .x((d) => { return x(d.xPoint) })
+    .y((d) => { return y(d.yPoint) }))
   .attr("stroke", "#8b4ef5")
   .style("fill", "none")
-  .style("stroke-width", 14)
+  .style("stroke-width", 5)
 
+let hourHandLine = svg
+  .append("g")
+  .append("path")
+  .datum(hourHand)
+  .attr("d", d3.line()
+    .x((d) => { return x(d.xPoint) })
+    .y((d) => { return y(d.yPoint) }))
+  .attr("stroke", "#8b4ef5")
+  .style("fill", "none")
+  .style("stroke-width", 5)
+
+d3.select("#calc-button").on("click", () => {
+  minuteHandLine
+    .datum(minuteHand)
+
+  hourHandLine
+    .datum(hourHand)
+  
+})
