@@ -1,6 +1,6 @@
 
-const hourHand = [{ xPoint: 0, yPoint: 0 }, { xPoint: 50, yPoint: 100 }];
-const minuteHand = [{ xPoint: 0, yPoint: 0 }, { xPoint: 100, yPoint: 10 }];
+const hourHand = [{ xPoint: 0, yPoint: 0 }];
+const minuteHand = [{ xPoint: 0, yPoint: 0 }];
 
 function angleCalc() {
   const time = document.getElementById("hours").value;

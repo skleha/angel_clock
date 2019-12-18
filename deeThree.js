@@ -53,14 +53,23 @@ let hourHandLine = svg
   .style("fill", "none")
   .style("stroke-width", 5)
 
-let centerPoint = svg
-  .selectAll("circle")
-  .enter()
+let clockRing = svg
   .append("circle")
-  .attr("cx", 0)
-  .attr("cy", 0)
-  .attr("r", 3)
-  .style("fill", "#636363")
+  .attr("cx", d => { return x(0) })
+  .attr("cy", d => { return y(0) })
+  .attr("r", 130)
+  .attr("stroke", "#8b4ef5")
+  .style("stroke-width", 7)
+  .style("fill", "none")
+
+let centerPoint = svg
+  .append("circle")
+  .attr("cx", d => { return x(0) })
+  .attr("cy", d => { return y(0) })
+  .attr("r", 4)
+  .style("fill", "#8b4ef5")
+
+
 
 
 d3.select("#calc-button").on("click", () => {
