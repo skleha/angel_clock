@@ -66,8 +66,8 @@ let centerPoint = svg
   .append("circle")
   .attr("cx", d => { return x(0) })
   .attr("cy", d => { return y(0) })
-  .attr("r", 4)
-  .style("fill", "#8b4ef5")
+  .attr("r", 8)
+  .style("fill", "#000000")
 
 d3.select("#calc-button").on("click", () => {
   
