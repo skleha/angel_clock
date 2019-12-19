@@ -70,9 +70,7 @@ let centerPoint = svg
   .style("fill", "#8b4ef5")
 
 d3.select("#calc-button").on("click", () => {
-  console.log('hi');
-  console.log(minuteHand);
-
+  
   minuteHandLine
     .datum(minuteHand)
     .attr("d", d3.line()
