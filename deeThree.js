@@ -38,7 +38,7 @@ let minuteHandLine = svg
   .attr("d", d3.line()
     .x((d) => { return x(d.xPoint) })
     .y((d) => { return y(d.yPoint) }))
-  .attr("stroke", "#8b4ef5")
+  .attr("stroke", "#000000")
   .style("fill", "none")
   .style("stroke-width", 5)
 
@@ -49,7 +49,7 @@ let hourHandLine = svg
   .attr("d", d3.line()
     .x((d) => { return x(d.xPoint) })
     .y((d) => { return y(d.yPoint) }))
-  .attr("stroke", "#8b4ef5")
+  .attr("stroke", "#000000")
   .style("fill", "none")
   .style("stroke-width", 5)
 
