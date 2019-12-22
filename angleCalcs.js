@@ -4,6 +4,8 @@ const minuteHand = [{ xPoint: 0, yPoint: 0 }, { xPoint: 4, yPoint: 6.9 }];
 
 function angleCalc() {
   const time = document.getElementById("hours").value;
+  
+  
   const timeArray = time.split(":");
   const hourAngle = calcHourAngle(timeArray);
   const minuteAngle = calcMinuteAngle(timeArray);
@@ -46,4 +48,3 @@ function handPoint(angle, length) {
   const y = parseFloat((hourHandLength * Math.cos(radians)).toFixed(1));
   return {xPoint: x, yPoint: y};
 }
-
