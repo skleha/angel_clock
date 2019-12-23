@@ -4,7 +4,14 @@ const minuteHand = [{ xPoint: 0, yPoint: 0 }, { xPoint: 4, yPoint: 6.9 }];
 
 function angleCalc() {
   const time = document.getElementById("hours").value;
-  
+  const errors = validateInput(time);
+  console.log(errors);
+
+  if (!errors.isValid) {
+    alert("There is an error!");
+    return;
+  }
+
   const timeArray = time.split(":");
   const hourAngle = calcHourAngle(timeArray);
   const minuteAngle = calcMinuteAngle(timeArray);
