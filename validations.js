@@ -1,13 +1,27 @@
 
 function validateInput(data) {
-  let error = {};
+  let message = null;
 
-  if (data === "error") {
-    error.message = "whatever";
+  // doesn't have colon
+  // has more than one colon
+  // doesn't have numbers
+
+
+  if (data === "") {
+    message = "Input was blank.  Enter time in text input";
   }
 
+  if (!data.includes(":")) {
+    message = "Improper time format.  Please enter time using the following format, \"5:30\".";
+  }
+
+  if (data.split(":").length > 2) {
+    message = "Improper time format.  Please enter time using the following format, \"5:30\".";
+  }
+
+
   return {
-    error,
-    isValid: Object.keys(error).length === 0
+    message,
+    notValid: message !== null
   }
 }

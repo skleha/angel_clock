@@ -5,9 +5,10 @@ const minuteHand = [{ xPoint: 0, yPoint: 0 }, { xPoint: 4, yPoint: 6.9 }];
 function angleCalc() {
   const time = document.getElementById("hours").value;
   const errors = validateInput(time);
+  
 
-  if (!errors.isValid) {
-    alert("There is an error!");
+  if (errors.notValid) {
+    alert(errors.message);
     return;
   }
 
