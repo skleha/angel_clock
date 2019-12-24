@@ -19,7 +19,6 @@ function validateInput(data) {
     message = "Improper time format.  Please enter time using the following format, \"5:30\".";
   }
 
-
   return {
     message,
     notValid: message !== null
