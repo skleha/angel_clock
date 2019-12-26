@@ -1,26 +1,36 @@
 
+function hasResponse(data) {
+  return (data !== "") ? true : false
+}
+
+function hasOneColon(data)  {
+  return (data.split(":").length === 2) ? true : false
+}
+
+function hourWithinBounds(data) {
+  const hour = parseInt(data.split(":")[0])
+  return (hour >= 0 && hour < 24) ? true : false
+}
+
+function minutesWithinBounds(data) {
+  const minutes = parseInt(data.split(":")[1])
+  return (minutes >= 0 && minutes <= 59) ? true : false
+}
+
 function validateInput(data) {
-  let message = null;
-
-  // doesn't have colon
-  // has more than one colon
-  // doesn't have numbers
-
-
-  if (data === "") {
-    message = "Input was blank.  Enter time in text input";
+  const errors = {
+    message: "Time must be entered using the following format, \"hh:mm.\"",
+    notValid: false
   }
+  
+  if (hasResponse(data) &&
+      hasOneColon(data) &&
+      hourWithinBounds(data) && 
+      minutesWithinBounds(data)) {
 
-  if (!data.includes(":")) {
-    message = "Improper time format.  Please enter time using the following format, \"5:30\".";
-  }
+    } else {
+      errors.notValid = true;
+    }
 
-  if (data.split(":").length > 2) {
-    message = "Improper time format.  Please enter time using the following format, \"5:30\".";
-  }
-
-  return {
-    message,
-    notValid: message !== null
-  }
+  return errors;
 }
