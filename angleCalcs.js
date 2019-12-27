@@ -19,12 +19,14 @@ function angleCalc() {
   hourHand[1] = handPoint(hourAngle, 4);
   minuteHand[1] = handPoint(minuteAngle, 8);
   
-  const answer = Math.abs(hourAngle - minuteAngle).toFixed(1);
+  const answerOne = Math.abs(hourAngle - minuteAngle).toFixed(1);
+  const answerTwo = (360 - answerOne).toFixed(1);
+
   const answerOneDiv = document.getElementById("answerOne");
-  answerOneDiv.innerHTML = answer;
+  answerOneDiv.innerHTML = Math.max(answerOne, answerTwo);
   
   const answerTwoDiv = document.getElementById("answerTwo");
-  answerTwoDiv.innerHTML = (360 - answer).toFixed(1);
+  answerTwoDiv.innerHTML = Math.min(answerOne, answerTwo);
 
 }
 
