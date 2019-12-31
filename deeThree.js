@@ -1,20 +1,13 @@
 
-
-let margin = { top: 10, right: 30, bottom: 20, left: 30 },
-  width = 400 - margin.left - margin.right,
-  height = 400 - margin.top - margin.bottom;
-
 let svg = d3.select("#my_dataviz")
   .append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
+  .attr("width", 400)
+  .attr("height", 400)
   .append("g")
-  .attr("transform",
-    "translate(" + margin.left + "," + margin.top + ")")
   
 let x = d3.scaleLinear()
   .domain([-10, 10])
-  .range([0, width])
+  .range([0, 400])
 
 // let xAxisCall = d3.axisBottom(x);
 // svg.append("g")
@@ -24,7 +17,7 @@ let x = d3.scaleLinear()
 
 let y = d3.scaleLinear()
   .domain([-10, 10])
-  .range([height, 0])
+  .range([400, 0])
 
 // let yAxisCall = d3.axisLeft(y);
 // svg.append("g")
