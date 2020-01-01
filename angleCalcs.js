@@ -24,10 +24,10 @@ function angleCalc() {
   const answerTwo = (360 - answerOne).toFixed(1);
 
   const answerOneDiv = document.getElementById("answerOne");
-  answerOneDiv.innerHTML = Math.max(answerOne, answerTwo);
+  answerOneDiv.innerHTML = `${Math.max(answerOne, answerTwo)} degrees`;
   
   const answerTwoDiv = document.getElementById("answerTwo");
-  answerTwoDiv.innerHTML = Math.min(answerOne, answerTwo);
+  answerTwoDiv.innerHTML = `${Math.min(answerOne, answerTwo)} degrees`;
 
 }
 
