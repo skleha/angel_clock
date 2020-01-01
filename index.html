@@ -10,30 +10,33 @@
 </head>
 <body>
   
-  <div class="data-fields">
-    <h4>Enter Time:</h4>
-    <input id="hours" type="text" placeholder="ex. 5:34">
-    <h4></h4>
-    <button id="calc-button" onclick="angleCalc()">Calculate</button>
-  </div>
+  <div class="main">
 
-  <h4>Angle Between Hour and Minute Hands:</h4>
-
-  <div class="data-fields">
-    
-    <h4>Max Angle:</h4>
-    <div class="data-container">
-      <div id="answerOne"></div>
+    <div class="data-fields">
+      <h4>Enter Time:</h4>
+      <input id="hours" type="text" placeholder="ex. 5:34">
+      <h4></h4>
+      <button id="calc-button" onclick="angleCalc()">Calculate</button>
     </div>
 
-    <h4>Min Angle:</h4>
-    
-    <div class="data-container">
-      <div id="answerTwo"></div>
+    <h4>Angle Between Hour and Minute Hands:</h4>
+
+    <div class="data-fields">
+      <h4>Max Angle:</h4>
+        <div class="data-container">
+        <div id="answerOne"></div>
+        </div>
+
+      <h4>Min Angle:</h4>
+        <div class="data-container">
+        <div id="answerTwo"></div>
+        </div>
     </div>
+
+    <div id="my_dataviz"></div>
+    
   </div>
 
-  <div id="my_dataviz"></div>
 
   <script src="validations.js"></script>
   <script src="angleCalcs.js"></script>
