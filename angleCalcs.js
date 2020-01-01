@@ -17,7 +17,7 @@ function angleCalc() {
   const minuteAngle = calcMinuteAngle(timeArray);
   
   hourHand[1] = handPoint(hourAngle, 4);
-  minuteHand[1] = handPoint(minuteAngle, 8);
+  minuteHand[1] = handPoint(minuteAngle, 7);
   
   const answerOne = Math.abs(hourAngle - minuteAngle).toFixed(1);
   const answerTwo = (360 - answerOne).toFixed(1);
