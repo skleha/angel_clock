@@ -9,20 +9,9 @@ let x = d3.scaleLinear()
   .domain([-10, 10])
   .range([0, 400])
 
-// let xAxisCall = d3.axisBottom(x);
-// svg.append("g")
-//   .attr("class", "x-axis")
-//   .attr("transform", "translate(0," + height + ")")
-//   .call(xAxisCall)
-
 let y = d3.scaleLinear()
   .domain([-10, 10])
   .range([400, 0])
-
-// let yAxisCall = d3.axisLeft(y);
-// svg.append("g")
-//   .attr("class", "y-axis")
-//   .call(yAxisCall);
 
 let minuteHandLine = svg
   .append("g")
