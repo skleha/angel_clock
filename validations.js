@@ -7,6 +7,11 @@ function hasOneColon(data)  {
   return (data.split(":").length === 2) ? true : false
 }
 
+function minutesAreTwoDigits(data) {
+  const minutes = data.split(":")[1];
+  return minutes.length === 2;
+}
+
 function hourWithinBounds(data) {
   const hour = parseInt(data.split(":")[0])
   return (hour >= 0 && hour < 24) ? true : false
@@ -19,14 +24,15 @@ function minutesWithinBounds(data) {
 
 function validateInput(data) {
   const errors = {
-    message: "Time must be entered using the following format, \"hh:mm\".\nHours are between 1 and 12; minutes between 0 and 59.",
+    message: "Time must be entered using the following format, \"hh:mm\".\nHours are between 1 and 12; minutes between 00 and 59.",
     notValid: false
   }
   
   if (hasResponse(data) &&
       hasOneColon(data) &&
       hourWithinBounds(data) && 
-      minutesWithinBounds(data)) {
+      minutesWithinBounds(data) &&
+      minutesAreTwoDigits(data)) {
 
     } else {
       errors.notValid = true;
