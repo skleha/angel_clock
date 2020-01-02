@@ -24,7 +24,7 @@ function minutesWithinBounds(data) {
 
 function validateInput(data) {
   const errors = {
-    message: "Time must be entered using the following format, \"hh:mm\".\nHours are between 1 and 12; minutes between 00 and 59.",
+    message: "Time must be entered using the following format, \"hh:mm\".\nHours are between 1 and 12; minutes are two digit and between 00 and 59.",
     notValid: false
   }
   
